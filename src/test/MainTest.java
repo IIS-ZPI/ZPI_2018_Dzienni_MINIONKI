@@ -9,4 +9,18 @@ class FirstJUnit5Tests {
         assertEquals(2, 1 + 1);
     }
 
+    @Test
+    void getPriceTest()
+    {
+        ICalculator iCalculator = new Calculator();
+        State state = new State();
+        Product product = new Product();
+        double price = iCalculator.calculatePrice(stan, product);
+    }
+
+    @Test
+    void createState()
+    {
+
+    }
 }
