@@ -1,3 +1,3 @@
 public interface ICalculator {
-    double calculatePrice(State state, Product product);
+    double calculatePrice(State state, double basePrice);
 }
