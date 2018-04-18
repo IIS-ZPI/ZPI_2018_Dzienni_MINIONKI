@@ -1,4 +1,10 @@
-package PACKAGE_NAME;
-
 public enum ProductType {
+
+    Groceries,
+    PreparedFood,
+    PrescriptionDrug,
+    NonPrescriptionDrug,
+    Clothing,
+    Intangibles
+
 }

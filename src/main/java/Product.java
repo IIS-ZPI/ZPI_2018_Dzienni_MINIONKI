@@ -1,17 +1,24 @@
 public class Product {
     private String name;
-    private double tax;
+    private double basePrice;
+    private double price;
+    private ProductType type;
 
-    public Product(String name, double tax) {
+    public Product(String name, double basePrice, ProductType type) {
         this.name = name;
-        this.tax = tax;
+        this.basePrice = basePrice;
+        this.type = type;
     }
 
     public String getName() {
         return name;
     }
 
-    public double getTax() {
-        return tax;
+    public ProductType getType() {
+        return type;
+    }
+
+    public double getPrice() {
+        return price;
     }
 }
