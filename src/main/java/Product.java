@@ -9,7 +9,7 @@ public class Product {
 
     public String getName() {
         return name;
-    }
+    }//
 
     public double getTax() {
         return tax;
