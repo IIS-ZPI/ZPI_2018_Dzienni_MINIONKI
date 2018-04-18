@@ -12,5 +12,28 @@ class StateTests {
         assertEquals(expectedName, state.getName());
     }
 
+    @Test
+    void stateTaxTest() {
+        State state;
+        state = new State("Test state", Double.MAX_VALUE);
+        assertEquals(Double.MAX_VALUE, state.getTax());
 
+        state = new State("Test state", Double.MIN_VALUE);
+        assertEquals(Double.MIN_VALUE, state.getTax());
+
+        state = new State("Test state", Double.NaN);
+        assertEquals(Double.NaN, state.getTax());
+
+        state = new State("Test state", Double.NEGATIVE_INFINITY);
+        assertEquals(Double.NEGATIVE_INFINITY, state.getTax());
+
+        state = new State("Test state", Double.POSITIVE_INFINITY);
+        assertEquals(Double.POSITIVE_INFINITY, state.getTax());
+
+        state = new State("Test state", 29d);
+        assertEquals(29.0, state.getTax());
+        assertEquals(false, ((Double)state.getTax()).isNaN());
+        assertEquals(false, ((Double)state.getTax()).isInfinite());
+
+    }
 }
