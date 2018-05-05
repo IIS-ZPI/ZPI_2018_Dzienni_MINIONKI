@@ -1,0 +1,11 @@
+.root {
+  -fx-background-color: #ffffff;
+}
+.label{
+	fx-font-weight:bold;
+	fx-font-size:11px;
+}
+
+.text{
+	fx-font-weight:bold;
+}
