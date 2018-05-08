@@ -6,7 +6,7 @@ public class State {
 
     public State(String name) {
         this.name = name;
-        productList = new ArrayList<Product>();
+        //productList = new ArrayList<Product>(); // i ve commented this
     }
 
     public void addProduct(Product product){

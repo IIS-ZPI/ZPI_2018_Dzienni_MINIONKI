@@ -1,17 +1,22 @@
 public class Product {
     private String name;
-    private double tax;
+    private double price; // i changed tax into price
+    //added category
+    private String category;
 
-    public Product(String name, double tax) {
+    public Product(String name, double price,String category) {
         this.name = name;
-        this.tax = tax;
+        this.price = price;
+        this.category=category;
     }
 
     public String getName() {
         return name;
     }//
 
-    public double getTax() {
-        return tax;
+    public double getPrice() {
+        return price;
     }
+
+    public String getCategory() {return category;}
 }
