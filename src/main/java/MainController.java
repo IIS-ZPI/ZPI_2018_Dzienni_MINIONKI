@@ -3,6 +3,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
@@ -46,8 +47,11 @@ public class MainController {
             e.printStackTrace();
         }
 
-         taxLabel.setText("Tu obliczony podatek !!!");
-         priceLabel.setText(String.valueOf(score));
+        taxLabel.setText("Tu obliczony podatek !!!");
+        StringBuilder result = new StringBuilder();
+
+
+        priceLabel.setText(String.valueOf(score));
     }
 
 
