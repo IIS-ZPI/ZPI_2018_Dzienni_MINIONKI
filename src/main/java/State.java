@@ -1,16 +1,24 @@
+import java.util.ArrayList;
+
 public class State {
     private String name;
-    private double tax;
+    private ArrayList<Product> productList;
 
-    public State(String name, double tax) {
+    public State(String name) {
         this.name = name;
-        this.tax = tax;
+        //productList = new ArrayList<Product>(); // i ve commented this
     }
 
-    public double getTax() { return tax; }
+    public void addProduct(Product product){
+        productList.add(product);
+    }
 
     public String getName() {
         return name;
+    }
+
+    public ArrayList<Product> getProductList() {
+        return productList;
     }
 
 }
