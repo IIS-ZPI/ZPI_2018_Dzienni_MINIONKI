@@ -36,10 +36,10 @@ public class MainController {
         String st=stateField.getText();
         String prod=productField.getText();
         Double pri=Double.valueOf(priceField.getText());
-        Main m=new Main();
-        double score=0;
+        Calculator calculator = new Calculator();
+        double score = 0;
         try {
-             score=m.calculatePrice(new State(st),new Product(prod,pri,cat));
+             score = calculator.calculatePrice(new State(st),new Product(prod,pri,cat));
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ParseException e) {

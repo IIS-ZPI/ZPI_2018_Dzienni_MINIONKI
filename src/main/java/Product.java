@@ -14,10 +14,6 @@ public class Product {
         return name;
     }
 
-    public ProductType getType() {
-        return type;
-    }
-
     public double getPrice() {
         return price;
     }
