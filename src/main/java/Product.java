@@ -12,7 +12,11 @@ public class Product {
 
     public String getName() {
         return name;
-    }//
+    }
+
+    public ProductType getType() {
+        return type;
+    }
 
     public double getPrice() {
         return price;
