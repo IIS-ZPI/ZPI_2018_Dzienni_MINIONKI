@@ -14,7 +14,7 @@ public class Calculator implements ICalculator {
         String category = product.getCategory();
         String stateName = state.getName();
         //json gets a tax for proper state and category
-        String jsonFilePath = "jsonFile.json";
+        String jsonFilePath = "stany.json";
         FileReader fileReader = new FileReader(jsonFilePath);
         JSONParser jsonParser = new JSONParser();
 
@@ -32,7 +32,7 @@ public class Calculator implements ICalculator {
                         ) {
                     JSONObject cat = (JSONObject) categoryObject;
                     if(category.equals(cat.get("Name"))) {
-                        long tax = (Long) cat.get("Tax");
+                        double tax = (double) cat.get("Tax");
                         return price + (tax / 100.0) * price;
                     }
                 }

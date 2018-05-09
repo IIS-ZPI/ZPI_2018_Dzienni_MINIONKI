@@ -38,47 +38,18 @@ public class Main extends Application {
         //create state
         //  State alabama=new State("alabama");
         //
-        JSONObject alabama = new JSONObject();
-        alabama.put("Name", "Alabama");
-
-        JSONObject groceries = new JSONObject();
-        groceries.put("Name", "Groceries");
-        groceries.put("Tax", 15);
-
-        JSONObject prepFood = new JSONObject();
-        prepFood.put("Name", "Prepared food");
-        prepFood.put("Tax", 10);
-
-        JSONObject clothing = new JSONObject();
-        clothing.put("Name", "Clothing");
-        clothing.put("Tax", 20);
-
-        JSONArray alabamaCategories = new JSONArray();
-        alabamaCategories.add(prepFood);
-        alabamaCategories.add(clothing);
-        alabamaCategories.add(groceries);
-
-        alabama.put("Categories", alabamaCategories);
-
-        JSONArray states = new JSONArray();
-        states.add(alabama);
-
-        JSONObject json = new JSONObject();
-        json.put("States", states);
-
-        try {
-            FileWriter jsonFileWriter = new FileWriter("jsonFile.json");
-            jsonFileWriter.write(json.toJSONString());
-            jsonFileWriter.flush();
-            jsonFileWriter.close();
-            System.out.print(json);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
        // Main m = new Main();
         //double scorre = m.calculatePrice(new State("Alabama"), socks);
         //System.out.println(scorre);
+        JsonIO jsonIO = new JsonIO("stany");
+
+        jsonIO.newStateToJson("Alabama", 10, 20, 13, 15, 16 ,7);
+        jsonIO.newStateToJson("Hawaii", 7, 25, 5, 13, 15 ,7);
+        jsonIO.newStateToJson("Puerto Rico", 15, 14, 16, 19, 23 ,13);
+        jsonIO.newStateToJson("Nevada", 16, 15, 13, 24, 12 ,16);
+        jsonIO.newStateToJson("Arizona", 14, 12, 16, 12, 18 ,23);
+
         launch(args);
     }
 
