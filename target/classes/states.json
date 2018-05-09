@@ -1,0 +1,28 @@
+[
+  {
+    "state":"alabama",
+    "category": "groceries",
+    "tax":"15"
+  },
+  {
+    "state":"alabama",
+    "category": "prepared food",
+    "tax":"15"
+  },
+  {
+    "state":"alabama",
+    "category": "prescription drug",
+    "tax":"15"
+  },
+  {
+    "state":"alabama",
+    "category": "clothing",
+    "tax":"15"
+  },
+  {
+    "state":"alabama",
+    "category": "instangibles",
+    "tax":"15"
+  }
+
+]
