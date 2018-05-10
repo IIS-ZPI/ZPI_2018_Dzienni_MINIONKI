@@ -1,6 +1,7 @@
 .root {
   -fx-background-color:gray;
 }
+
 .label{
 	fx-font-weight:bold;
 	fx-font-size:13px;
