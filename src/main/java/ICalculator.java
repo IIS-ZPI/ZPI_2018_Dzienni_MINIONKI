@@ -3,4 +3,5 @@ import java.io.IOException;
 
 public interface ICalculator {
     double calculatePrice(State state, Product product) throws IOException, ParseException;
+    double calculateTax(State state, Product product) throws IOException, ParseException;
 }

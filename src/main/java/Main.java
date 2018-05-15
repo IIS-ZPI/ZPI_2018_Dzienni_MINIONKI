@@ -17,7 +17,7 @@ public class Main extends Application {
 
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/view.fxml"));
-        Scene scene = new Scene(root, 500, 400);
+        Scene scene = new Scene(root, 720, 360);
         scene.getStylesheets().add("style.css");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -42,7 +42,8 @@ public class Main extends Application {
        // Main m = new Main();
         //double scorre = m.calculatePrice(new State("Alabama"), socks);
         //System.out.println(scorre);
-        JsonIO jsonIO = new JsonIO("stany");
+
+        JsonIO jsonIO = new JsonIO("jsonFile");
 
         jsonIO.newStateToJson("Alabama", 10, 20, 13, 15, 16 ,7);
         jsonIO.newStateToJson("Hawaii", 7, 25, 5, 13, 15 ,7);
