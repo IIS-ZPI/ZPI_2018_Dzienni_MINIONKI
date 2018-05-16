@@ -18,7 +18,7 @@ public class JsonIO {
         state.put("Name", stateName);
 
         JSONObject groceries = new JSONObject();
-        groceries.put("Name", "Groceries");
+        groceries.put("Name", "groceries");
         groceries.put("Tax", GroceriesTax);
 
         JSONObject preparedFood = new JSONObject();

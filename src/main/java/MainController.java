@@ -1,7 +1,16 @@
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainController {
 
@@ -38,10 +47,10 @@ public class MainController {
         taxColumn.setCellValueFactory(new PropertyValueFactory<State, Double>("tax"));
     }
 
-    /*@FXML
+    @FXML
     public void handleButtonAction(ActionEvent event) {
-        String category = categoryField.getValue();
-        Double price = Double.valueOf(priceField.getText());
+        String productName = productComboBox.getValue();
+        //Double price = Double.valueOf(priceField.getText());
         Calculator calculator = new Calculator();
 
         List<State> states = new ArrayList<>();
@@ -57,8 +66,8 @@ public class MainController {
             for (Object State : statesJson) {
                 JSONObject jsonState = (JSONObject) State;
                 State state1 = new State((String) jsonState.get("Name"));
-                state1.setTax(calculator.calculateTax(state1, new Product(" ", price, category)));
-                state1.setPrice(calculator.calculatePrice(state1, new Product(" ", price, category)));
+                state1.setTax(calculator.calculateTax(state1, new Product(" ", CSVIO.readPriceForProductName(productName), CSVIO.readProductCategoryForProductName(productName))));
+                state1.setPrice(calculator.calculatePrice(state1, new Product(" ", CSVIO.readPriceForProductName(productName), CSVIO.readProductCategoryForProductName(productName))));
                 states.add(state1);
             }
         } catch (Exception e){
@@ -68,7 +77,9 @@ public class MainController {
         data.addAll(states);
 
         tableView.setItems(data);
-    }*/
+    }
+
+
 
 
 }
