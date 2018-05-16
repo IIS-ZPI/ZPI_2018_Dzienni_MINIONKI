@@ -1,20 +1,7 @@
-import com.sun.javafx.collections.ObservableListWrapper;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Observable;
 
 public class MainController {
 
@@ -23,10 +10,8 @@ public class MainController {
     Button calculateButton;
 
     @FXML
-    ComboBox<String> categoryField;
+    ComboBox<String> productComboBox;
 
-    @FXML
-    TextField priceField;
 
     @FXML
     TableView<State> tableView;
@@ -45,10 +30,7 @@ public class MainController {
         priceColumn.setPrefWidth(100);
         taxColumn.setPrefWidth(100);
 
-        categoryField.setItems(FXCollections.observableArrayList(
-                "Groceries", "Prepared food",
-                "Prescription Drug", "Non-Presription Drug",
-                "Clothing", "Intangibles"));
+        productComboBox.setItems(FXCollections.observableArrayList(CSVIO.readProductNames()));
 
         tableView.getColumns().addAll(stateNameColumn, priceColumn, taxColumn);
         stateNameColumn.setCellValueFactory(new PropertyValueFactory<State, String>("name"));
@@ -56,7 +38,7 @@ public class MainController {
         taxColumn.setCellValueFactory(new PropertyValueFactory<State, Double>("tax"));
     }
 
-    @FXML
+    /*@FXML
     public void handleButtonAction(ActionEvent event) {
         String category = categoryField.getValue();
         Double price = Double.valueOf(priceField.getText());
@@ -86,7 +68,7 @@ public class MainController {
         data.addAll(states);
 
         tableView.setItems(data);
-    }
+    }*/
 
 
 }

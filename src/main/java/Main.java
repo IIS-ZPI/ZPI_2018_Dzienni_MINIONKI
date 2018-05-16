@@ -51,6 +51,9 @@ public class Main extends Application {
         jsonIO.newStateToJson("Nevada", 16, 15, 13, 24, 12 ,16);
         jsonIO.newStateToJson("Arizona", 14, 12, 16, 12, 18 ,23);
 
+        CSVIO a = new CSVIO();
+        a.readProductNames();
+
         launch(args);
     }
 
