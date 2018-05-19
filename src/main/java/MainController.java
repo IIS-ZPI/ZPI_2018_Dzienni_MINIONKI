@@ -66,6 +66,7 @@ public class MainController {
             for (Object State : statesJson) {
                 JSONObject jsonState = (JSONObject) State;
                 State state1 = new State((String) jsonState.get("Name"));
+                System.out.println(CSVIO.readProductCategoryForProductName(productName));
                 state1.setTax(calculator.calculateTax(state1, new Product(" ", CSVIO.readPriceForProductName(productName), CSVIO.readProductCategoryForProductName(productName))));
                 state1.setPrice(calculator.calculatePrice(state1, new Product(" ", CSVIO.readPriceForProductName(productName), CSVIO.readProductCategoryForProductName(productName))));
                 states.add(state1);
