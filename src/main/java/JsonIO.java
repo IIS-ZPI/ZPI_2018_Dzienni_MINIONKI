@@ -18,27 +18,27 @@ public class JsonIO {
         state.put("Name", stateName);
 
         JSONObject groceries = new JSONObject();
-        groceries.put("Name", "Groceries");
+        groceries.put("Name", "groceries");
         groceries.put("Tax", GroceriesTax);
 
         JSONObject preparedFood = new JSONObject();
-        preparedFood.put("Name", "Prepared food");
+        preparedFood.put("Name", "prepared food");
         preparedFood.put("Tax", PreparedFoodTax);
 
         JSONObject prescriptionDrug = new JSONObject();
-        prescriptionDrug.put("Name", "Prescription Drug");
+        prescriptionDrug.put("Name", "prescription drug");
         prescriptionDrug.put("Tax", PrescriptionDrugTax);
 
         JSONObject nonPrescriptionDrug = new JSONObject();
-        nonPrescriptionDrug.put("Name", "Non-Presription Drug");
+        nonPrescriptionDrug.put("Name", "non-prescription drug");
         nonPrescriptionDrug.put("Tax", NonPrescriptionDrugTax);
 
         JSONObject clothing = new JSONObject();
-        clothing.put("Name", "Clothing");
+        clothing.put("Name", "clothing");
         clothing.put("Tax", ClothingTax);
 
         JSONObject intangibles = new JSONObject();
-        intangibles.put("Name", "Intangibles");
+        intangibles.put("Name", "intangibles");
         intangibles.put("Tax", IntangiblesTax);
 
         JSONArray stateCategories = new JSONArray();

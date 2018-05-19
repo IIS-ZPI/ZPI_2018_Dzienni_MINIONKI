@@ -4,27 +4,27 @@
       "Categories": [
         {
           "Tax": 10.0,
-          "Name": "Groceries"
+          "Name": "groceries"
         },
         {
           "Tax": 20.0,
-          "Name": "Prepared food"
+          "Name": "prepared food"
         },
         {
           "Tax": 13.0,
-          "Name": "Prescription Drug"
+          "Name": "prescription drug"
         },
         {
           "Tax": 15.0,
-          "Name": "Non-Presription Drug"
+          "Name": "non-prescription drug"
         },
         {
           "Tax": 16.0,
-          "Name": "Clothing"
+          "Name": "clothing"
         },
         {
           "Tax": 7.0,
-          "Name": "Intangibles"
+          "Name": "intangibles"
         }
       ],
       "Name": "Alabama"
@@ -33,27 +33,27 @@
       "Categories": [
         {
           "Tax": 7.0,
-          "Name": "Groceries"
+          "Name": "groceries"
         },
         {
           "Tax": 25.0,
-          "Name": "Prepared food"
+          "Name": "prepared food"
         },
         {
           "Tax": 5.0,
-          "Name": "Prescription Drug"
+          "Name": "prescription drug"
         },
         {
           "Tax": 13.0,
-          "Name": "Non-Presription Drug"
+          "Name": "non-prescription drug"
         },
         {
           "Tax": 15.0,
-          "Name": "Clothing"
+          "Name": "clothing"
         },
         {
           "Tax": 7.0,
-          "Name": "Intangibles"
+          "Name": "intangibles"
         }
       ],
       "Name": "Hawaii"
@@ -62,27 +62,27 @@
       "Categories": [
         {
           "Tax": 15.0,
-          "Name": "Groceries"
+          "Name": "groceries"
         },
         {
           "Tax": 14.0,
-          "Name": "Prepared food"
+          "Name": "prepared food"
         },
         {
           "Tax": 16.0,
-          "Name": "Prescription Drug"
+          "Name": "prescription drug"
         },
         {
           "Tax": 19.0,
-          "Name": "Non-Presription Drug"
+          "Name": "non-prescription drug"
         },
         {
           "Tax": 23.0,
-          "Name": "Clothing"
+          "Name": "clothing"
         },
         {
           "Tax": 13.0,
-          "Name": "Intangibles"
+          "Name": "intangibles"
         }
       ],
       "Name": "Puerto Rico"
@@ -91,27 +91,27 @@
       "Categories": [
         {
           "Tax": 16.0,
-          "Name": "Groceries"
+          "Name": "groceries"
         },
         {
           "Tax": 15.0,
-          "Name": "Prepared food"
+          "Name": "prepared food"
         },
         {
           "Tax": 13.0,
-          "Name": "Prescription Drug"
+          "Name": "prescription drug"
         },
         {
           "Tax": 24.0,
-          "Name": "Non-Presription Drug"
+          "Name": "non-prescription drug"
         },
         {
           "Tax": 12.0,
-          "Name": "Clothing"
+          "Name": "clothing"
         },
         {
           "Tax": 16.0,
-          "Name": "Intangibles"
+          "Name": "intangibles"
         }
       ],
       "Name": "Nevada"
@@ -120,27 +120,27 @@
       "Categories": [
         {
           "Tax": 14.0,
-          "Name": "Groceries"
+          "Name": "groceries"
         },
         {
           "Tax": 12.0,
-          "Name": "Prepared food"
+          "Name": "prepared food"
         },
         {
           "Tax": 16.0,
-          "Name": "Prescription Drug"
+          "Name": "prescription drug"
         },
         {
           "Tax": 12.0,
-          "Name": "Non-Presription Drug"
+          "Name": "non-prescription drug"
         },
         {
           "Tax": 18.0,
-          "Name": "Clothing"
+          "Name": "clothing"
         },
         {
           "Tax": 23.0,
-          "Name": "Intangibles"
+          "Name": "intangibles"
         }
       ],
       "Name": "Arizona"

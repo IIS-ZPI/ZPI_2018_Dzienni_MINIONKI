@@ -1,4 +1,3 @@
-import com.sun.javafx.collections.ObservableListWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -8,25 +7,17 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observable;
+import java.util.Map;
 
 public class MainController {
 
-
     @FXML
-    Button calculateButton;
+    ComboBox<String> productComboBox;
 
-    @FXML
-    ComboBox<String> categoryField;
-
-    @FXML
-    TextField priceField;
 
     @FXML
     TableView<State> tableView;
@@ -34,6 +25,8 @@ public class MainController {
     TableColumn stateNameColumn;
     TableColumn priceColumn;
     TableColumn taxColumn;
+
+    private Map<String,Product> productList;
 
     @FXML
     public void initialize(){
@@ -45,10 +38,12 @@ public class MainController {
         priceColumn.setPrefWidth(100);
         taxColumn.setPrefWidth(100);
 
-        categoryField.setItems(FXCollections.observableArrayList(
-                "Groceries", "Prepared food",
-                "Prescription Drug", "Non-Presription Drug",
-                "Clothing", "Intangibles"));
+        productList = CSVIO.readProducts("product_list.csv");
+
+
+
+
+        productComboBox.setItems(FXCollections.observableArrayList(productList.keySet()));
 
         tableView.getColumns().addAll(stateNameColumn, priceColumn, taxColumn);
         stateNameColumn.setCellValueFactory(new PropertyValueFactory<State, String>("name"));
@@ -58,8 +53,7 @@ public class MainController {
 
     @FXML
     public void handleButtonAction(ActionEvent event) {
-        String category = categoryField.getValue();
-        Double price = Double.valueOf(priceField.getText());
+        String productName = productComboBox.getValue();
         Calculator calculator = new Calculator();
 
         List<State> states = new ArrayList<>();
@@ -75,8 +69,8 @@ public class MainController {
             for (Object State : statesJson) {
                 JSONObject jsonState = (JSONObject) State;
                 State state1 = new State((String) jsonState.get("Name"));
-                state1.setTax(calculator.calculateTax(state1, new Product(" ", price, category)));
-                state1.setPrice(calculator.calculatePrice(state1, new Product(" ", price, category)));
+                state1.setTax(calculator.calculateTax(state1, productList.get(productName)));
+                state1.setPrice(calculator.calculatePrice(state1, productList.get(productName)));
                 states.add(state1);
             }
         } catch (Exception e){
@@ -87,6 +81,8 @@ public class MainController {
 
         tableView.setItems(data);
     }
+
+
 
 
 }
