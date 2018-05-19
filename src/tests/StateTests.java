@@ -1,4 +1,9 @@
+import org.json.simple.parser.ParseException;
 import org.junit.Test;
+
+import javax.swing.*;
+
+import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,11 +15,5 @@ public class StateTests {
         char[] helloArray = { 'T', 'e', 's', 't', ' ', 's', 't', 'a', 't', 'e' };
         String expectedName = new String(helloArray);
         assertEquals(expectedName, state.getName());
-    }
-
-    @Test
-    public void stateTaxTest() {
-        State state = new State("Test state");
-        //assertEquals(29.0, state);
     }
 }
