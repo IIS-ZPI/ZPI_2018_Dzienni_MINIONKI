@@ -30,7 +30,7 @@ public class JsonIO {
         prescriptionDrug.put("Tax", PrescriptionDrugTax);
 
         JSONObject nonPrescriptionDrug = new JSONObject();
-        nonPrescriptionDrug.put("Name", "non-presription Drug");
+        nonPrescriptionDrug.put("Name", "non-prescription drug");
         nonPrescriptionDrug.put("Tax", NonPrescriptionDrugTax);
 
         JSONObject clothing = new JSONObject();
