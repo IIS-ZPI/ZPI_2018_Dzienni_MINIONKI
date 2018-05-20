@@ -1,18 +1,11 @@
 language: java
-install: true
-
-cache:
-  directories:
-  - $HOME/.m2
 
 install:
   - mvn install -DfinalName=release -DskipTests=false -Dmaven.javadoc.skip=true -B -V
 
 deploy:
   provider: releases
-  api_key:
-    secure:
-    415c03ddb1776d8951c58d9c9d2c725c3fd36d4d
+  api_key: 415c03ddb1776d8951c58d9c9d2c725c3fd36d4d
   skip_cleanup: true
   on:
     tags: true
