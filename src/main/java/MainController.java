@@ -32,7 +32,7 @@ public class MainController {
     public void initialize(){
         stateNameColumn = new TableColumn("Stan");
         priceColumn = new TableColumn("Cena");
-        taxColumn = new TableColumn("VAT");
+        taxColumn = new TableColumn("Sales Tax");
 
         stateNameColumn.setPrefWidth(160);
         priceColumn.setPrefWidth(100);
