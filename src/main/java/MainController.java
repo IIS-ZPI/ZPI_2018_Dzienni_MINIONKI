@@ -7,6 +7,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class MainController {
     private Map<String,Product> productList;
 
     @FXML
-    public void initialize(){
+    public void initialize() throws CategoryDoesNotExistException, ParseException {
         stateNameColumn = new TableColumn("Stan");
         priceColumn = new TableColumn("Cena");
         taxColumn = new TableColumn("Sales Tax");

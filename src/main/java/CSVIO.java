@@ -1,3 +1,5 @@
+import org.json.simple.parser.ParseException;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -6,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class CSVIO {
-    public static HashMap<String,Product> readProducts(String csvFile){
+    public static HashMap<String,Product> readProducts(String csvFile) throws CategoryDoesNotExistException, ParseException {
         String line = "";
         String cvsSplitBy = ",";
         HashMap<String,Product> productsList = new HashMap<>();

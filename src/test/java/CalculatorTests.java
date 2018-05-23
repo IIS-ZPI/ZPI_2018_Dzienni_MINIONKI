@@ -30,7 +30,7 @@ public class CalculatorTests {
     }
 
     @Test(expected = CategoryDoesNotExistException.class)
-    public void badProductCategory() throws CategoryDoesNotExistException {
+    public void badProductCategory() throws CategoryDoesNotExistException, IOException, ParseException {
         new Product("Test product", 10.0, "WRONG CATEGORY");
     }
 }

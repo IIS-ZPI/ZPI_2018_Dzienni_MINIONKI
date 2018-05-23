@@ -1,8 +1,15 @@
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class JsonIO {
     JSONArray states;
@@ -57,6 +64,25 @@ public class JsonIO {
 
     public double getTaxFronJson(String stateName){
         return 0;
+    }
+
+    public static List<String> getCategoryListFromJson(String jsonName) throws IOException, ParseException {
+        FileReader fileReader = new FileReader(jsonName + ".json");
+        JSONParser jsonParser = new JSONParser();
+
+
+        JSONObject jsonObject = (JSONObject) jsonParser.parse(fileReader);
+
+        JSONArray states = (JSONArray) jsonObject.get("States");
+        JSONObject sta = (JSONObject) states.get(0);
+        JSONArray categories = (JSONArray) sta.get("Categories");
+        ArrayList<String> cats = new ArrayList<>();
+        for (Object categoryObject : categories
+                ) {
+            JSONObject cat = (JSONObject) categoryObject;
+            cats.add(cat.get("Name").toString());
+        }
+        return cats;
     }
 
     private void saveToJson(){
