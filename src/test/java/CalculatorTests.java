@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class CalculatorTests {
 
     @Test
-    public void calculatePriceTest() throws IOException, ParseException {
+    public void calculatePriceTest() throws IOException, ParseException, CategoryDoesNotExistException {
         State state = new State("Alabama");
         Product product = new Product("Test product", 10.0, "groceries");
 
@@ -19,7 +19,7 @@ public class CalculatorTests {
     }
 
     @Test
-    public void calculateTaxTest() throws IOException, ParseException {
+    public void calculateTaxTest() throws IOException, ParseException, CategoryDoesNotExistException {
         State state = new State("Alabama");
         Product product = new Product("Test product", 10.0, "groceries");
 
@@ -29,8 +29,8 @@ public class CalculatorTests {
         assertEquals(11.0, price, 0.001);
     }
 
-    @Test(expected = CategoryDoesNotExistsException.class)
-    public void badProductCategory() throws CategoryDoesNotExistsException {
+    @Test(expected = CategoryDoesNotExistException.class)
+    public void badProductCategory() throws CategoryDoesNotExistException {
         new Product("Test product", 10.0, "WRONG CATEGORY");
     }
 }
