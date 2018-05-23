@@ -9,6 +9,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import java.io.FileReader;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +39,10 @@ public class MainController {
         priceColumn.setPrefWidth(100);
         taxColumn.setPrefWidth(100);
 
-        productList = CSVIO.readProducts("product_list.csv");
+        System.out.println(getClass().getResource("/product_list.csv").toString());
+
+
+            productList = CSVIO.readProducts(getClass().getResourceAsStream("product_list.csv"));
 
 
 
